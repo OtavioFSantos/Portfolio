@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62%;
+    scroll-behavior: smooth;
+}
+
+@media(max-width: 75em){
+    html{
+        font-size: 60%;
+    }
+}
+
+@media(max-width: 61.25em){
+    html{
+        font-size: 58%;
+    }
+}
+
+@media(max-width: 28.75em){
+    html{
+        font-size: 55%;
+    }
+}
+
+body{
+    font-family: 'Monospace', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #ddd;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+h1, h2{
+    font-weight: 700;
+    text-align: center;
+}
+
+h1{
+    font-size: 6rem;
+}
+
+h2{
+    font-size: 2.6rem;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #ddd;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2d1674;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.nav-list{
+    display: flex;
+    margin-right: 3rem;
+}
+
+@media(max-width: 28.75em){
+    .nav{
+        justify-content: center;
+    }
+
+    .nav-list{
+        margin: 0 1rem;
+    }
+}
+
+.nav-list a{
+    display: block;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.nav-list a:hover{
+    background: #b74c90;
+}
+
+.welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #101010;
+}
+
+.welcome-section > p{
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: #6B41ED;
+    text-align: justify;
+    padding: 20px;
+}
+
+.welcome-section > ul{
+    font-size: 2rem;
+}
+
+.projects-section{
+    text-align: center;
+    padding: 10rem 2rem;
+    background: #ddd;
+}
+
+.projects-section-header{
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid #101010;
+    color: #101010;
+}
+
+@media (max-width: 28.75em){
+    .projects-section-header{
+        font-size: 2rem;
+    }
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 5rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em){
+    .projects-section{
+        padding: 6rem 1rem;
+    }
+
+    .projects-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+.project{
+    background: #101010;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+.code{
+    color: #101010;
+    transition: color 0.3s ease-out;
+}
+
+.project:hover .code{
+    color: #99256E;
+}
+
+.project-image{
+    height: calc(100% - 6.5rem);
+    width: 100%;
+}
+
+.project-title{
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+.btn-show-all{
+    font-size: 2rem;
+    background: #101010;
+    transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover{
+    background: #ddd;
+    color: #101010;
+}
+
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 40vh;
+    background: #101010;
+    color: #101010;
+}
+
+.contact-section-header > h2{
+    font-size: 4rem;
+    color: #ddd;
+}
+
+@media (max-width: 28.75em){
+    .contact-section-header > h2{
+        font-size: 3rem;
+    }
+}
+
+.contact-section-header > p{
+    font-style: italic;
+    color: #ddd;
+}
+
+.contact-links{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-details{
+    color: #6B41ED;
+    font-size: 2.4rem;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover{
+    transform: translateY(8px);
+}
+
+footer{
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: #101010;
+    border-top: 4px solid #2d1674;
+}
+
+footer > p{
+    margin: 2rem;
+    color: #ddd;
+}
+
+@media (max-width: 28.75em){
+    footer{
+        flex-direction: column;
+    text-align: center;
+    }
+}
